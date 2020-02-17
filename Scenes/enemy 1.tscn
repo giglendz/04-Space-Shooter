@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scriptenemy.gd" type="Script" id=1]
+[ext_resource path="res://6_0.png" type="Texture" id=2]
+
+[node name="enemy 1" type="KinematicBody2D"]
+editor/display_folded = true
+position = Vector2( 5.66508, -106.798 )
+collision_layer = 8
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 1.5, 1.5 )
+polygon = PoolVector2Array( 16, 8, 14, 8, 8, 16, -9, 16, -9, 13.9, -15, 8.9, -15, 6.3, -16, 4, -16, -8.4, -15.1, -9, -16, -11.7, -16, -16, 16, -16 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
